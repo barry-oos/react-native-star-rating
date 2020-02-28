@@ -1,6 +1,6 @@
 // React and react native imports
 import React, { Component } from 'react';
-import { Image, StyleSheet, ViewPropTypes } from 'react-native';
+import { Image, StyleSheet, ViewPropTypes, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 
@@ -154,14 +154,14 @@ class StarButton extends Component {
     } = this.props;
 
     return (
-      <Button
+      <View
         activeOpacity={activeOpacity}
         disabled={disabled}
         containerStyle={buttonStyle}
         onPress={this.onButtonPress}
       >
         {this.renderIcon()}
-      </Button>
+      </View>
     );
   }
 }
